@@ -1,0 +1,223 @@
+/* Base page styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f7f7f7;
+    margin: 0;
+}
+
+/* Left-side vertical navbar in soft orange */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 220px;
+    height: 100vh;
+    background-color: #ff9800; /* softer orange */
+    color: #ffffff;
+    padding: 20px 15px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.navbar .brand {
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.navbar a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 14px;
+    margin-bottom: 6px;
+}
+
+/* Main container shifted to the right of navbar */
+.container {
+    max-width: 1100px;
+    margin: 40px auto;
+    padding: 0 20px 40px 260px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Card blocks */
+.card {
+    background-color: #ffffff;
+    padding: 18px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.08);
+}
+
+/* Headings */
+h2 {
+    margin-top: 0;
+}
+
+/* Labels and inputs */
+label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+input[type="text"] {
+    width: 100%;
+    max-width: 300px;
+    padding: 6px 8px;
+    margin-top: 3px;
+    box-sizing: border-box;
+}
+
+/* Center the add-student form horizontally */
+#add-student form {
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+/* Controls section */
+#controls {
+    text-align: center;
+}
+
+#controls input[type="text"] {
+    width: 280px;
+    max-width: 100%;
+    padding: 6px 8px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+}
+
+.buttons {
+    margin-top: 8px;
+}
+
+/* Buttons with softer orange theme */
+button {
+    padding: 7px 14px;
+    margin: 4px 6px;
+    cursor: pointer;
+    border: none;
+    border-radius: 4px;
+    background-color: #ff9800;
+    color: #ffffff;
+    font-size: 13px;
+}
+
+button:hover {
+    background-color: #fb8c00;
+}
+
+/* Messages */
+.error {
+    display: none;
+    color: #c62828;
+    font-size: 12px;
+}
+
+.success {
+    display: none;
+    color: #2e7d32;
+}
+
+/* Table: rounded, zebra rows, hover */
+table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    font-size: 14px;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+/* Header */
+th {
+    background-color: #ff9800;
+    color: #ffffff;
+    padding: 10px 8px;
+    text-align: center;
+    font-weight: 600;
+}
+
+/* Body cells */
+td {
+    border-top: 1px solid #e0e0e0;
+    padding: 8px 6px;
+    text-align: center;
+}
+
+/* Zebra striping in light orange */
+tbody tr:nth-child(odd) {
+    background-color: #ffffff;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #fff8e1; /* very light orange */
+}
+
+/* Row hover effect */
+tbody tr:hover {
+    background-color: #ffecb3;
+}
+
+/* Dynamic row color classes used by JS for attendance */
+.row-green {
+    background-color: rgba(0, 200, 0, 0.15);
+}
+
+.row-yellow {
+    background-color: rgba(255, 200, 0, 0.2);
+}
+
+.row-red {
+    background-color: rgba(255, 0, 0, 0.15);
+}
+
+/* Clickable boxes with softer orange accent */
+.box {
+    width: 24px;
+    height: 24px;
+    border: 2px solid #ff9800;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-weight: 700;
+    user-select: none;
+    font-size: 14px;
+    background-color: #ffffff;
+}
+
+.box.checked {
+    background-color: #ff9800;
+    color: #ffffff;
+    border-color: #fb8c00;
+}
+
+/* Highlight class used by JS */
+.highlight {
+    outline: 2px solid #ffb74d;
+}
+
+/* Responsive tweak */
+@media (max-width: 800px) {
+    .navbar {
+        position: static;
+        width: 100%;
+        height: auto;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .container {
+        padding: 20px;
+        margin: 20px auto;
+    }
+
+    table {
+        font-size: 12px;
+    }
+}
